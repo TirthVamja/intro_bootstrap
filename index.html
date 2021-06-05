@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginModalToggle">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -43,7 +43,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" style="color: floralwhite;">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -90,7 +90,9 @@
                     <!-- <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" href="#here" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom">
                         Reserve Table
                     </a> -->
-                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning col-sm-10 mx-auto">Reserve Table</a>
+                    <a class="btn btn-warning col-sm-10 mx-auto" id="reserveModalToggle">Reserve Table</a>
+                    <!-- <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning col-sm-10 mx-auto">Reserve Table</a> -->
+                    
                     <!-- <button class="btn btn-warning col-sm-10 mx-auto" onclick="">Reserve Table</button> -->
                 </div>
             </div>
@@ -103,7 +105,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" style="color: floralwhite;">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -418,6 +420,15 @@
                 }
                 
             });
+
+            $("#reserveModalToggle").click(function () {
+               $("#reserveModal").modal('toggle'); 
+            });
+
+            $("#loginModalToggle").click(function () {
+               $("#loginModal").modal('toggle'); 
+            });
+
         });
     </script>
 </body>
